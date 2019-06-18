@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <strong>
+        <%= users.join('--') %>
+    </strong>
+    <br>
+    <% var isExist = true; %>
+    <!-- --------- -->
+    <% if(isExist) {%>
+        <strong>Hello IsExistence <%=isExist%></strong>
+    <%}%>
+    <% var i = 1;%>
+    <%if (i == -1) {%>
+        <i>A</i>
+    <%}else if(i == 0 ) {%>
+        <i>B</i>
+    <%}else {%>
+        <i>C</i>
+    <%}%>
+</body>
+</html>

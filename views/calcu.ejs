@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="wrapper" >
+        <div class="container">
+            <form autocomplete="off" action="/calcu-demo" method="POST">
+
+                <select name="calcu">
+                    <option value="sum">SUM</option>
+                    <option value="sub">SUB</option>
+                    <option value="mul">MUL</option>
+                    <option value="other">OTHER</option>
+                </select>
+
+                <div class="group">
+                    <label for="numberA">Number A:</label>
+                    <input type="text" id="numberA" name="numberA">
+                </div>
+                <div class="group">
+                    <label for="numberB">Number B:</label>
+                    <input id="numberB" type="text" name="numberB">
+                </div>
+                <br><br>
+                <input type="submit" value="CALCU" id="submit">
+            </form>
+
+        </div>
+        </div>
+</body>
+</html>

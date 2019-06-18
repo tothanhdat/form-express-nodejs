@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+   <div class="container">
+        
+        <hr>
+        <form action="/add-user" method="POST">
+            <input type="text" name="username" placeholder="USERNAME">
+            <br>
+            <input type="text" name="password" placeholder="Password">
+            <br>
+            <button type="submit" class="btn-primary">ADD</button>
+        </form>
+        <hr>
+        <%if(error) {%>
+            <%if(message === 'user_exist'){%>
+                <strong>Lỗi Tồn Tại Username</strong>
+            <%}%>
+        <%}else {%>
+            <ul>
+                <%users.forEach(item => {%>
+                    <li>
+                        <%= item.username%>
+                    </li>
+                <%})%>
+            </ul>
+        <%}%>
+   </div>
+</body>
+</html>
